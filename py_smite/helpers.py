@@ -245,7 +245,7 @@ class RingBuffer(object):
         b_temp = copy.copy(self._b)
         c = []
         if len(b_temp) > 0:
-            for i in xrange(len(b_temp)):
+            for i in range(len(b_temp)):
                 c.append(b_temp.pop())
 
         return(c)
