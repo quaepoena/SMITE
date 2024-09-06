@@ -7,8 +7,7 @@ import os, sys
 
 # Insert the parent directory (where SMITE is) to path
 curdir = os.path.dirname(os.path.abspath(__file__))
-os.chdir(curdir)
-sys.path.insert(0,os.path.dirname(curdir)) 
+sys.path.insert(1, os.path.join(os.path.dirname(curdir), 'py_smite'))
 from py_smite import SMITE, helpers
 
 MY_MONITOR = 'default'
