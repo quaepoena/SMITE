@@ -140,7 +140,8 @@ class CREDGeometry(Structure):
 #===========================
 
 if platform.architecture()[0] == '64bit':
-        iViewXAPI = windll.LoadLibrary("iViewXAPI64.dll")
+        dllPath = util.find_library('iViewXAPI64')
+        iViewXAPI = windll.LoadLibrary(dllPath)
 else:
         iViewXAPI = windll.LoadLibrary("iViewXAPI.dll")
         
